@@ -10,9 +10,10 @@ typedef struct format
 } format_t;
 
 int _putchar(char c);
-int _isalpha(int c);
 void convert_char(va_list);
 void convert_string(va_list);
+void print_num(int);
+void convert_int(va_list);
 int _printf(const char *format, ...);
 
 #endif

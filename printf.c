@@ -15,6 +15,8 @@ int _printf(const char *format, ...)
 	format_t converter[] = {
 		{"c", convert_char},
 		{"s", convert_string},
+		{"d", convert_int},
+		{"i", convert_int},
 		{NULL, NULL}
 	};
 	int j, i = 0;
