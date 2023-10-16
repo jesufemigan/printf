@@ -7,33 +7,56 @@
  *
  * @num: number to print
  *
- * Return: void
+ * Return: int
  */
 
-void print_num(int num)
+int print_num(int num)
 {
+	int count = 0;
+
 	if (num < 0)
 	{
 		_putchar('-');
+		count++;
 		num = -num;
 	}
 
 	if (num / 10)
 		print_num(num / 10);
 	_putchar((num % 10) + '0');
+
+	if (num == 0)
+		return (1);
+	while (num != 0)
+	{
+		count++;
+		num /= 10;
+	}
+	return (count);
 }
 
 /**
  * print_unum - print unsigned int
  * @num: number to print
- * Return: void
+ * Return: int
  */
 
-void print_unum(unsigned int num)
+int print_unum(unsigned int num)
 {
+	int count = 0;
+
 	if (num / 10)
 		print_unum(num / 10);
 	_putchar((num % 10) + '0');
+
+	if (num == 0)
+		return (1);
+	while (num != 0)
+	{
+		count++;
+		num /= 10;
+	}
+	return (count);
 }
 
 /**
@@ -41,24 +64,24 @@ void print_unum(unsigned int num)
  *
  * @converter: list of args
  *
- * Return: void
+ * Return: int
  */
 
-void convert_signed_int(va_list converter)
+int convert_signed_int(va_list converter)
 {
 	int num;
 
 	num = va_arg(converter, signed int);
-	print_num(num);
+	return (print_num(num));
 }
 
 /**
  * convert_unsigned_int - handle %u
  * @converter: list of args
- * Return: void
+ * Return: int
  */
 
-void convert_unsigned_int(va_list converter)
+int convert_unsigned_int(va_list converter)
 {
 	int num;
 	unsigned int unum;
@@ -69,10 +92,10 @@ void convert_unsigned_int(va_list converter)
 	{
 		num = -num;
 		unum = UINT_MAX - (unsigned int)(num - 1);
-		print_unum(unum);
+		return (print_unum(unum));
 	}
 	else
 	{
-		print_unum(num);
+		return (print_unum(num));
 	}
 }

@@ -32,13 +32,13 @@ int int_to_octal(int num)
 /**
  * convert_octal - print value of octal
  * @converter: list of args
- * Return: void
+ * Return: int
  */
 
-void convert_octal(va_list converter)
+int convert_octal(va_list converter)
 {
 	int num;
 
 	num = va_arg(converter, int);
-	print_num(int_to_octal(num));
+	return (print_num(int_to_octal(num)));
 }

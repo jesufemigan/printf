@@ -20,9 +20,11 @@ int _printf(const char *format, ...)
 		{"b", convert_binary},
 		{"o", convert_octal},
 		{"u", convert_unsigned_int},
+		{"x", convert_hex_lower},
+		{"X", convert_hex_upper},
 		{NULL, NULL}
 	};
-	int j, i = 0;
+	int j, count = 0, i = 0;
 	va_list words;
 	va_start(words, format);
 
@@ -31,6 +33,7 @@ int _printf(const char *format, ...)
 		if ((format[i] != '%'))
 		{
 			_putchar(format[i]);
+			count++;
 		}
 		else
 		{
@@ -39,6 +42,7 @@ int _printf(const char *format, ...)
 			if (format[i] == '%')
 			{
 				_putchar('%');
+				count++;
 			}
 			else
 			{
@@ -48,7 +52,7 @@ int _printf(const char *format, ...)
 				{
 					if (format[i] == converter[j].format[0])
 					{
-						converter[j].f(words);
+						count =+ converter[j].f(words);
 					}
 					j++;
 				}
@@ -57,5 +61,5 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
-	return (0);
+	return (count);
 }

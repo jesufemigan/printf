@@ -34,13 +34,13 @@ int int_to_binary(int num)
  *
  * @converter: list of argument
  *
- * Return: void
+ * Return: int
  */
 
-void convert_binary(va_list converter)
+int convert_binary(va_list converter)
 {
 	int num;
 
 	num = va_arg(converter, int);
-	print_num(int_to_binary(num));
+	return (print_num(int_to_binary(num)));
 }

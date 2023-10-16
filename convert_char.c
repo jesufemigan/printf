@@ -6,10 +6,10 @@
  *
  * @converter: list fo args
  *
- * Return: void
+ * Return: int
  */
 
-void convert_char(va_list converter)
+int convert_char(va_list converter)
 {
-	_putchar(va_arg(converter, int));
+	return (_putchar(va_arg(converter, int)));
 }

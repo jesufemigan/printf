@@ -6,18 +6,21 @@
  *
  * @converter: list of args
  *
- * Return: void
+ * Return: int
  */
 
-void convert_string(va_list converter)
+int convert_string(va_list converter)
 {
 	char *str;
+	int count;
 
 	str = va_arg(converter, char *);
 
 	while (*str)
 	{
 		_putchar(*str);
+		count++;
 		str++;
 	}
+	return (count);
 }
