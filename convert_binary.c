@@ -26,7 +26,7 @@ int int_to_binary(int num)
 		base *= 10;
 		num /= 2;
 	}
-	return binary;
+	return (binary);
 }
 
 /**

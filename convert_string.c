@@ -4,7 +4,7 @@
 /**
  * convert_string - convert the %c in printf
  *
- * @conveter: list of args
+ * @converter: list of args
  *
  * Return: void
  */
