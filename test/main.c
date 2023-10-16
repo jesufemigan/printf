@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "../main.h"
+#include <limits.h>
 
 /**
  * main - Entry Point
@@ -9,10 +10,10 @@
 
 int main(void)
 {
-	_printf("%% %c %s", 'a', "boy");
+	_printf("%% %c %u", 'a', -10);
 	printf("\n");
-	_printf("%d %o", 20, 67);
-
+	_printf("%d %u", -20, -20);
+	printf("\n");
 	printf("%u\n", -10);
 	return (0);
 }

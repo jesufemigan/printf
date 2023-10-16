@@ -15,10 +15,11 @@ int _printf(const char *format, ...)
 	format_t converter[] = {
 		{"c", convert_char},
 		{"s", convert_string},
-		{"d", convert_int},
-		{"i", convert_int},
+		{"d", convert_signed_int},
+		{"i", convert_signed_int},
 		{"b", convert_binary},
 		{"o", convert_octal},
+		{"u", convert_unsigned_int},
 		{NULL, NULL}
 	};
 	int j, i = 0;
