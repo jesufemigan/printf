@@ -30,19 +30,27 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
-			j = 0;
 
-			while (converter[j].format)
+			if (format[i] == '%')
 			{
-				if (format[i] == converter[j].format[0])
+				_putchar('%');
+			}
+			else
+			{
+				j = 0;
+
+				while (converter[j].format)
 				{
-					converter[j].f(words);
+					if (format[i] == converter[j].format[0])
+					{
+						converter[j].f(words);
+					}
+					j++;
 				}
-				j++;
 			}
 
 		}
-		i++;
+		format++;
 	}
 	return (0);
 }

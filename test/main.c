@@ -9,8 +9,8 @@
 
 int main(void)
 {
-	_printf("%s%c", "hello", 'b');
+	_printf("%%");
 	printf("\n");
-	printf("Hi\n");
+	printf("hello\n");
 	return (0);
 }
