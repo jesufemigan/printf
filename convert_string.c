@@ -4,11 +4,20 @@
 /**
  * convert_string - convert the %c in printf
  *
- * @
+ * @conveter: list of args
+ *
+ * Return: void
  */
 
 void convert_string(va_list converter)
 {
-	if (!converter)
-		return;
+	char *str;
+
+	str = va_arg(converter, char *);
+
+	while (*str)
+	{
+		_putchar(*str);
+		str++;
+	}
 }
