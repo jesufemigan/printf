@@ -18,6 +18,7 @@ int _printf(const char *format, ...)
 		{"d", convert_int},
 		{"i", convert_int},
 		{"b", convert_binary},
+		{"o", convert_octal},
 		{NULL, NULL}
 	};
 	int j, i = 0;

@@ -16,6 +16,7 @@ void print_num(int);
 void convert_int(va_list);
 int int_to_binary(int);
 void convert_binary(va_list);
+void convert_octal(va_list);
 int _printf(const char *format, ...);
 
 #endif
