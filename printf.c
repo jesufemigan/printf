@@ -17,6 +17,7 @@ int _printf(const char *format, ...)
 		{"s", convert_string},
 		{"d", convert_int},
 		{"i", convert_int},
+		{"b", convert_binary},
 		{NULL, NULL}
 	};
 	int j, i = 0;
