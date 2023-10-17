@@ -3,7 +3,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#define BUF_SIZE 1024;
+#define BUF_SIZE 1024
 #define BUF_FLUSH -1
 
 typedef struct format

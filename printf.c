@@ -61,5 +61,7 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
+	_putchar(BUF_FLUSH);
+	va_end(words);
 	return (count);
 }

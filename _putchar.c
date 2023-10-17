@@ -12,15 +12,15 @@
 int _putchar(int c)
 {
 	static int i;
-	static char buff[BUFF_SIZE];
-	if (c == BUF_FLUSH || i > BUFF_SIZE)
+	static char buf[BUF_SIZE];
+	if (c == BUF_FLUSH || i > BUF_SIZE)
 	{
-		write(1, buff, i);
+		write(1, buf, i);
 		i = 0;
 	}
 	if (c != BUF_FLUSH)
 	{
-		buff[i++] = c;
+		buf[i++] = c;
 	}
 	return (1);
 }
