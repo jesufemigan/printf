@@ -52,7 +52,7 @@ int _printf(const char *format, ...)
 				{
 					if (format[i] == converter[j].format[0])
 					{
-						count =+ converter[j].f(words);
+						count += converter[j].f(words);
 					}
 					j++;
 				}
