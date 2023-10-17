@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		{"u", convert_unsigned_int},
 		{"x", convert_hex_lower},
 		{"X", convert_hex_upper},
+		{"S", convert_special_string},
 		{NULL, NULL}
 	};
 	int j, count = 0, i = 0;
